@@ -47,50 +47,33 @@ A Google Apps Script-powered Google Sheets template that connects to the Sleeper
 ### Prerequisites
 - Google account with access to Google Sheets
 - Active Sleeper fantasy football league
-- Basic familiarity with Google Sheets
+- Your Sleeper username (found in Sleeper app settings)
 
 ### Installation
 
-1. **Create a new Google Sheet**
-   - Go to [sheets.google.com](https://sheets.google.com)
-   - Create a new blank spreadsheet
+1. **Copy the Google Sheet Template**
+   - Click this link to make a copy: [Sleeper Fantasy Football Analysis Sheet](https://docs.google.com/spreadsheets/d/11brRnpj0p7nmMmT-OvnL1NhLPiRFfgWHnNRbXfUgoxw/copy)
+   - Click "Make a copy" when prompted
+   - The sheet will be added to your Google Drive
 
-2. **Open Google Apps Script**
-   - In your Google Sheet, go to `Extensions` → `Apps Script`
-   - Delete any existing code in the editor
+2. **Connect Your Sleeper Account**
+   - Open your copied sheet
+   - Go to the "Home" tab
+   - Enter your Sleeper username in the designated cell
+   - Your username can be found in the Sleeper app under Settings
 
-3. **Add the Script Files**
-   - Copy and paste each of the following files into separate script files:
-     - `importjson.gs` - JSON import functionality
-     - `players.gs` - Player database management
-     - `refresh.gs` - Data refresh automation
-     - `reset.gs` - Sheet reset utilities
-
-4. **Set Up Your League Information**
-   - In your Google Sheet, create a "Home" sheet
-   - Add your Sleeper username in cell B2
-   - Add the current year in cell B3
-   - Add your Sleeper user ID in cell B4
-
-5. **Create Required Sheets**
-   Create the following sheets in your Google Sheets document:
-   - `Home` - Main dashboard and configuration
-   - `Players` - NFL player database
-   - `Trade Finder` - Trade analysis tool
-   - `Team Name/Owner ID` - League roster information
-   - `Team Names` - League user information
-   - `Master` - Matchup and scoring data
-
-6. **Initial Data Load**
-   - Run the `Players()` function to load the NFL player database
-   - Run the `refresh()` function to load your league data
+3. **Load Your League Data**
+   - Click the "Refresh Data" button or run the refresh function
+   - Your leagues and roster data will automatically populate
+   - The player database will be loaded automatically
 
 ## Usage
 
-### Getting Your Sleeper User ID
-1. Go to your Sleeper profile
-2. Your user ID is in the URL: `https://sleeper.app/leagues/[LEAGUE_ID]/team/[USER_ID]`
-3. Or use the Sleeper API: `https://api.sleeper.app/v1/user/[USERNAME]`
+### Finding Your Sleeper Username
+1. Open the Sleeper app on your phone or web browser
+2. Go to Settings (usually in your profile section)
+3. Your username is displayed in the account settings
+4. Enter this username in the sheet's "Home" tab
 
 ### Refreshing Data
 - Click the refresh button or run the `refresh()` function
@@ -145,12 +128,12 @@ This tool uses the [Sleeper API](https://docs.sleeper.com/) to fetch:
 - Verify your league is public or you have proper access
 - Ensure all required sheets are created with correct names
 
-## Contributing
+## Support
 
-This is an open-source project. Feel free to:
-- Report bugs or request features
-- Submit improvements to the codebase
-- Share your customizations with the community
+If you encounter any issues or need help:
+- Check the troubleshooting section above
+- Verify your Sleeper username is entered correctly
+- Ensure your leagues are set to public or you have proper access
 
 ## License
 
