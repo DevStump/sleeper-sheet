@@ -1,4 +1,4 @@
-# Sleeper Fantasy Football Analysis Sheet
+# SleeperSheet
 
 > **⚠️ DEPRECATED PROJECT ⚠️**
 > 
