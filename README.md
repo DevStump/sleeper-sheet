@@ -14,33 +14,23 @@ A Google Apps Script-powered Google Sheets template that connects to the Sleeper
 
 ## Features
 
-### 📊 **League Data Import**
+### **League Data Import**
 - Import your Sleeper fantasy football leagues automatically
 - View real-time roster data for all teams in your league
 - Track player statistics and availability
 
-### 🔄 **Automated Data Refresh**
+### **Automated Data Refresh**
 - One-click refresh of all league data
-- Automatic updates for matchups, rosters, and team information
+- Automatic updates for rosters and player values
 - Configurable refresh intervals
 
-### 💰 **Trade Calculator**
+### **Trade Calculator**
 - Advanced trade analysis and valuation
 - Compare player values across different scoring systems
-- Interactive trade finder with customizable filters
-- Reset functionality for clean slate analysis
 
-### 👥 **Team Management**
+### **Team Management**
 - View your roster composition
 - Analyze opponent rosters
-- Track team performance metrics
-- Player depth chart visualization
-
-### 🎯 **Player Database**
-- Complete NFL player database integration
-- Player stats, injury status, and team information
-- Search and filter functionality
-- Position-based analysis
 
 ## Setup Instructions
 
@@ -64,6 +54,7 @@ A Google Apps Script-powered Google Sheets template that connects to the Sleeper
 
 3. **Load Your League Data**
    - Click the "Refresh Data" button or run the refresh function
+   **You will need to authorize the Google Scripts to run when prompted for this to work**
    - Your leagues and roster data will automatically populate
    - The player database will be loaded automatically
 
@@ -81,7 +72,7 @@ A Google Apps Script-powered Google Sheets template that connects to the Sleeper
 - Recommended to refresh before important league decisions
 
 ### Using the Trade Calculator
-1. Navigate to the "Trade Finder" sheet
+1. Navigate to the "Trade Calculator" sheet
 2. Select players you're considering trading
 3. Use the built-in formulas to calculate trade values
 4. Use `resetTradeFinder()` to clear selections
@@ -91,22 +82,6 @@ A Google Apps Script-powered Google Sheets template that connects to the Sleeper
 - Filter by position, team, or injury status
 - Export data for external analysis tools
 
-## Customization
-
-### Adding Custom Formulas
-The sheet supports custom Google Sheets formulas. Common examples:
-```
-=IMPORTJSON("https://api.sleeper.app/v1/league/LEAGUE_ID/rosters","")
-=IMPORTJSON("https://api.sleeper.app/v1/league/LEAGUE_ID/users","")
-=IMPORTJSON("https://api.sleeper.app/v1/league/LEAGUE_ID/matchups/WEEK","")
-```
-
-### Modifying Refresh Frequency
-Edit the `refresh()` function in `refresh.gs` to customize:
-- Which data sources to update
-- Refresh intervals
-- Additional league information
-
 ## API Reference
 
 This tool uses the [Sleeper API](https://docs.sleeper.com/) to fetch:
@@ -115,25 +90,6 @@ This tool uses the [Sleeper API](https://docs.sleeper.com/) to fetch:
 - Roster compositions and player ownership
 - Weekly matchups and scoring
 - Complete NFL player database
-
-## Troubleshooting
-
-### Common Issues
-- **Script execution timeout**: For large leagues, run functions individually
-- **API rate limits**: Wait between successive data refreshes
-- **Missing data**: Verify your league ID and user credentials
-
-### Getting Help
-- Check the Google Apps Script execution logs
-- Verify your league is public or you have proper access
-- Ensure all required sheets are created with correct names
-
-## Support
-
-If you encounter any issues or need help:
-- Check the troubleshooting section above
-- Verify your Sleeper username is entered correctly
-- Ensure your leagues are set to public or you have proper access
 
 ## License
 
